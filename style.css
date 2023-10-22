@@ -1,0 +1,1226 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background: #F8F6F4; */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* <!-- This Is a Navigation bar Container css --> */
+.navbarContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 90%;
+    width: 90px;
+    top: 30px;
+    left: 20px;
+    border-radius: 50px;
+    background: #272829;
+}
+
+/* If you want your name to appear in place of your photo, then the style of this selector by uncommenting. */
+.navbarContainer img.UserImageName {
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-weight: bold; */
+    /* font-size: 48px; */
+    /* align-self: flex-start; */
+    /* color: #fff; */
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: uppercase; */
+}
+
+.navbarContainer span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0;
+    color: #fff;
+}
+
+.navbarContainer span.home {
+    margin-top: 75px;
+}
+
+.navbarContainer span.settings {
+    margin-bottom: 80px;
+}
+
+.navbarContainer i {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3 linear;
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.navbarContainer i:hover {
+    color: #ff6666;
+}
+
+.navbarContainer label {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navbarContainer label:hover {
+    color: #ff6666;
+}
+
+.navbarContainer .bi-box-arrow-right {
+    align-self: center;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3 linear;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    vertical-align: middle;
+}
+
+
+/* <!--This Is a User profile Container css--> */
+
+.userProfilePopup {
+    /* display: none; */
+    position: absolute;
+    top: 55%;
+    left: 7.5%;
+    background: #272829;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0px 10px;
+    display: none;
+    z-index: 1;
+}
+
+.userProfilePopup ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.userProfilePopup p {
+    margin: 10px 0px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.userProfilePopup p:hover {
+    text-decoration: underline 1px solid red;
+    color: #ff6666;
+    /* Hover text color */
+}
+
+/* <!--This Is a SignUP and SignIN Container css --> */
+.popupAlert-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 76, 76, 0.721);
+    z-index: 99999;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.popupAlert-container .popupContainer button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background: #ff445c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.popupAlert-container .popupContainer .overlay-container .overlay .overlay-panel button:active {
+    transform: scale(0.95);
+}
+
+.popupAlert-container .popupContainer .form-container button:active {
+    transform: scale(0.95);
+}
+
+.popupAlert-container .popupContainer .overlay-container .overlay .overlay-panel button:focus {
+    outline: none;
+}
+
+.popupAlert-container .popupContainer .form-container button:focus {
+    outline: none;
+}
+
+.popupAlert-container .popupContainer .overlay-container .overlay .overlay-panel button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+.popupAlert-container .popupContainer .form-container button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+.popupAlert-container .popupContainer .form-container form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popupAlert-container .popupContainer .form-container input {
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.popupContainer {
+    position: relative;
+    top: 15%;
+    left: 25%;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(194, 112, 249, 0.4) 0px 2px 4px, rgba(62, 75, 251, 0.3) 0px 7px 13px -3px, rgba(122, 67, 249, 0.2) 0px -3px 0px inset;
+    overflow: hidden;
+    /* text-align: center; */
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.popupContainer.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.popupContainer.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.popupAlert-container .popupContainer .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .6s ease-in-out;
+    z-index: 100;
+}
+
+.popupContainer.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: #ff416c;
+    background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.popupContainer.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.popupAlert-container .popupContainer .overlay-container .overlay .overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-left {
+    left: 0;
+    transform: translateX(-20%);
+}
+
+.popupContainer.right-panel-active .overlay-left {
+    transform: translateX(20%);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.popupContainer.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    z-index: 1001;
+}
+
+
+/* <!-- This Is a top Profile Nav Bar Container--> profile container style */
+.profileContainer {
+    position: fixed;
+    height: 70px;
+    width: 40%;
+    top: 2%;
+    right: 2%;
+    border-radius: 15px;
+    /* background: #EEEEEE; */
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileContainer .profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0px 10px;
+    z-index: 1001;
+}
+
+.profileContainer .profile-pic img {
+    border-radius: 20%;
+    box-shadow: 0px 0px 5px 0px #c1c1c1;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#profile-image-upload {
+    display: none;
+}
+
+.profileContainer .profile-pic .search {
+    position: relative;
+    width: 100%;
+    padding: 1px 150px 1px 0px;
+    border-radius: 20px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileContainer .profile-pic .search::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(184, 184, 184, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.profileContainer .profile-pic .search .bi {
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 3px 0px 0px 10px;
+    color: #272829;
+}
+
+.profileContainer .profile-pic .search .bi:hover {
+    color: #ff6666;
+}
+
+.profileContainer .profile-pic .search input {
+    background: none;
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: 0px 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.profileContainer .profile-pic .notification {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.profileContainer .profile-pic .notification .bi {
+    color: #272829;
+    cursor: pointer;
+    transition: .3 linear;
+    padding: 10px 20px 10px 20px;
+    font-size: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.profileContainer .profile-pic .notification .bi:hover {
+    color: #ff6666;
+}
+
+.profileContainer .profile-pic .bi-caret-down-fill {
+    color: #272829;
+    cursor: pointer;
+    transition: .3 linear;
+    padding: 10px 20px 10px 2px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileContainer .profile-pic .bi-caret-down-fill:hover {
+    color: #ff6666;
+}
+
+/* <!-- This Is a top Profile Nav Bar Popup Container css--> */
+/* Initially hide the profileUserPopup */
+.profileUserPopup {
+    display: none;
+    position: relative;
+    /* height: 100%; */
+}
+
+/* Style the popup as desired */
+.profileUserPopup h6 {
+    width: 100px;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    cursor: pointer;
+    border-radius: 2px;
+    background: #272829;
+    padding: 3px;
+    margin-top: 85px;
+    margin-right: 20px;
+    z-index: 1;
+    transition: background 0.3s;
+}
+
+.profileUserPopup h6:hover {
+    color: #0F0F0F;
+    background: #EEEEEE;
+    /* Change the background color on hover */
+}
+
+/* Style the bell icon */
+#bellIcon {
+    cursor: pointer;
+}
+
+/* <!-- This is a Notification Popup Container css--> */
+/* Style the notification popup container */
+.notificationPopup {
+    width: 300px;
+    height: 85%;
+    top: 11.4%;
+    right: 10%;
+    background: #272829;
+    position: fixed;
+    display: none;
+    /* border: 1px solid #ccc; */
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.notificationPopup h6 {
+    font-size: 18px;
+    color: #fff;
+    /* Change the color as desired */
+    margin: 15px 10px;
+    text-align: left;
+}
+
+.notificationPopup .Allclear {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background: #ff6666;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.notificationPopup .Allclear:hover {
+    background: #ff6666;
+    /* Change button background color on hover */
+}
+
+/* Style the notification list items */
+.notificationPopup .notificationList {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    overflow-y: auto;
+    max-height: 530px;
+    scroll-behavior: smooth;
+}
+
+.notificationPopup .notificationList::-webkit-scrollbar {
+    display: none;
+}
+
+.notificationPopup .notificationList li {
+    width: 260px;
+    /* height: 80px; */
+    height: fit-content;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    margin: 5px 20px 5px 20px;
+}
+
+.notificationPopup .notificationList li .notifyme {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.notificationPopup .notificationList li .notifyme h6 {
+    font-size: 18px;
+    color: #272829;
+    /* Change the color as desired */
+    margin: 15px 10px;
+    text-align: left;
+}
+
+.notificationPopup .notificationList li span {
+    position: relative;
+    display: inline-block;
+    margin-left: 110px;
+    /* Adjust the margin as needed */
+    cursor: pointer;
+    overflow: hidden;
+    /* Change the color as desired */
+}
+
+.notificationPopup .notificationList li .bi {
+    color: #272829;
+    cursor: pointer;
+    transition: .3 linear;
+    padding: 0px 0px 0px 0px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.notificationPopup .notificationList li .bi:hover {
+    color: #ff6666;
+}
+
+/* profile container style  end */
+
+/* <!-- Top Greeting Container css--> */
+.greetingContainer {
+    position: fixed;
+    height: 20%;
+    width: 46%;
+    top: 12%;
+    left: 10%;
+    border-radius: 15px;
+    background: #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greetingContainer h1 {
+    margin: 0px 0px 15px 90px;
+}
+
+.greetingContainer h1 strong {
+    font-size: 30px;
+    text-align: left;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.greetingContainer h1 strong span {
+    margin: 0px 5px;
+    font-size: 30px;
+    text-align: left;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.greetingContainer p {
+    margin: 0;
+    font-weight: 500;
+    color: #888;
+}
+
+.greetingContainer img {
+    align-self: flex-start;
+    margin: 10px 25px 80px 10px;
+    width: 200px;
+}
+
+/* <!-- This is a Completed Course Container css--> */
+.compCouContainer {
+    position: fixed;
+    height: 140px;
+    width: 19%;
+    top: 13%;
+    right: 23%;
+    border-radius: 15px;
+    margin: 0 auto;
+    background: #EEEEEE;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.compCouContainer .completedCourse {
+    text-align: left;
+    /* Center the content horizontally */
+    padding: 0px;
+    border-radius: 5px;
+    justify-self: center;
+    /* Add border radius for rounded corners */
+}
+
+.compCouContainer .completedCourse h1 {
+    font-size: 65px;
+    font-weight: 800;
+    margin: 25px 30px 20px 35px;
+    /* Adjust the font size as needed */
+}
+
+.compCouContainer .completedCourse h6 {
+    font-size: 20px;
+    margin: 40px 30px 20px 20px;
+    font-weight: 500;
+    color: #888;
+    position: relative;
+}
+
+
+
+
+/* <!-- This is a In Progress Course Container css--> */
+.couInProgContainer {
+    position: fixed;
+    height: 140px;
+    width: 19%;
+    top: 13%;
+    right: 2%;
+    border-radius: 15px;
+    background: #EEEEEE;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.couInProgContainer .InProgressCourse {
+    text-align: left;
+    /* Center the content horizontally */
+    padding: 0px;
+    border-radius: 5px;
+    justify-self: center;
+    /* Add border radius for rounded corners */
+}
+
+.couInProgContainer .InProgressCourse h1 {
+    font-size: 65px;
+    font-weight: 800;
+    margin: 25px 30px 20px 35px;
+    /* Adjust the font size as needed */
+}
+
+.couInProgContainer .InProgressCourse h6 {
+    font-size: 20px;
+    margin: 40px 20px 20px 20px;
+    font-weight: 500;
+    color: #888;
+    position: relative;
+}
+
+
+/* <!-- This is a Countries Container css--> */
+.countriesContainer {
+    position: fixed;
+    height: 10%;
+    width: 31%;
+    top: 35%;
+    left: 10%;
+    border-radius: 15px;
+    background: #EEEEEE;
+}
+
+.countriesContainer .countriesList {
+
+    position: relative;
+    bottom: 18px;
+    right: 5px;
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    padding: 0px;
+    display: flex;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.countriesContainer .countriesList::-webkit-scrollbar {
+    display: none;
+}
+
+.countriesContainer .countriesList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-width: auto;
+    width: 100%;
+    height: fit-content;
+    list-style-type: none;
+    margin: 5px 5px 5px 5px;
+    padding-right: 10px;
+    transition: .3s linear;
+    border-radius: 15px;
+    transition: .3s linear;
+    /* background: #EEEEEE; */
+    /* line-height: 40px; */
+}
+
+
+
+.countriesContainer .countriesList li img {
+    max-width: 90px;
+    /* Adjust the max-width as needed */
+    height: auto;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.countriesContainer .countriesList li h5 {
+    flex: 1;
+    margin: 0px 0px 0px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.countriesContainer .countriesList li .facultyName {
+    color: #888;
+    font-size: 14px;
+    margin: 5px 2px 0px 1px;
+    text-align: left;
+    /* Faculty name color */
+}
+
+.countriesContainer .countriesList li .continueCourse {
+    background: #333;
+    font-weight: 500;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    padding: 7px 18px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+    border: 1px solid #0F0F0F;
+}
+
+.countriesContainer .countriesList li .continueCourse:hover {
+    background: #ff6666;
+    border: 1px solid #0F0F0F;
+    color: #0F0F0F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- This is a Left Right Arrow Course Container --> */
+.LRarrowContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 10%;
+    width: 13%;
+    top: 35%;
+    left: 43%;
+    border-radius: 15px;
+    background: #EEEEEE;
+}
+
+.LRarrowContainer .leftArrow {
+    margin: 10px 10px 10px 30px;
+    color: #272829;
+    cursor: pointer;
+    font-size: 45px;
+    transition: transform 0.3s;
+}
+
+.LRarrowContainer .rightArrow {
+    margin: 10px 30px 10px 10px;
+    color: #272829;
+    cursor: pointer;
+    font-size: 45px;
+    transition: transform 0.3s;
+}
+
+/* Define the initial and rotated state */
+.leftArrow.rotated,
+.rightArrow.rotated {
+    transform: rotate(180deg);
+}
+
+
+/* Hover effect */
+.LRarrowContainer .leftArrow:hover,
+.LRarrowContainer .rightArrow:hover {
+    color: #ff4500;
+    /* Change arrow color on hover */
+}
+
+/* <!-- This is a Course Container css--> */
+.coursesContainer {
+    position: fixed;
+    height: 12%;
+    width: 48%;
+    top: 50%;
+    left: 9%;
+    border-radius: 15px;
+    /* background: #EEEEEE; */
+}
+
+.coursesContainer h6 {
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-decoration: none;
+    margin: 5px 14px;
+    padding: 5px;
+}
+
+.coursesContainer .coursesNav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 10px 0px 5px;
+}
+
+.coursesContainer .coursesNav label.selectCat {
+    text-decoration: none;
+    color: #333;
+    margin: 5px 10px;
+    padding: 5px;
+}
+
+.coursesContainer .coursesNav label.selectCat:hover {
+    color: #ff6666;
+}
+
+.coursesContainer .coursesNav input[type="radio"] {
+    display: none;
+    /* Hide the radio buttons */
+}
+
+.coursesContainer .coursesNav input[type="radio"]:checked+label.selectCat {
+    color: #0F0F0F;
+    font-weight: 500;
+}
+
+.coursesContainer .coursesList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    overflow-y: auto;
+    width: 100%;
+    max-height: 272px;
+    background: none;
+    scroll-behavior: smooth;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.coursesContainer .coursesList::-webkit-scrollbar {
+    display: none;
+}
+
+.coursesContainer .coursesList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    /* height: 100px; */
+    height: fit-content;
+    background: #EEEEEE;
+    border-bottom: 5px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 15px;
+    margin: 5px 15px 15px 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.coursesContainer .coursesList li img {
+    max-width: 100px;
+    /* Adjust the max-width as needed */
+    height: auto;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.coursesContainer .coursesList li h5 {
+    flex: 1;
+    margin: 0px 0px 0px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.coursesContainer .coursesList li .facultyName {
+    color: #888;
+    font-size: 14px;
+    margin: 5px 2px 0px 1px;
+    text-align: left;
+    /* Faculty name color */
+}
+
+.coursesContainer .coursesList li .courseDuration p {
+    margin: 10px 0px;
+}
+
+.coursesContainer .coursesList li .courseRating p {
+    margin: 10px 20px 10px 0px;
+}
+
+.coursesContainer .coursesList li .courseDuration,
+.coursesContainer .coursesList li .courseRating,
+.coursesContainer .coursesList li .viewCourse {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    font-weight: 500;
+}
+
+.coursesContainer .coursesList li .bi {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.coursesContainer .coursesList li .bi-star-fill {
+    font-size: 22px;
+}
+
+.coursesContainer .coursesList li .viewCourse {
+    background: #333;
+    font-weight: 500;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    padding: 2px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+    border: 1px solid #0F0F0F;
+}
+
+.coursesContainer .coursesList li .viewCourse:hover {
+    background: #ff6666;
+    border: 1px solid #0F0F0F;
+    color: #0F0F0F;
+}
+
+/* <!-- This is a User Progress Bar Container --> */
+.statisticsContainer {
+    position: fixed;
+    height: 300px;
+    width: 40%;
+    top: 35%;
+    right: 2%;
+    border-radius: 15px;
+    background: #EEEEEE;
+}
+
+.statisticsContainer img {
+    position: fixed;
+    height: 240px;
+    width: 38%;
+    top: 43%;
+    right: 2%;
+    border-radius: 15px;
+    background: #EEEEEE;
+}
+
+.statisticsContainer .statisticsHeading {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 5px 10px 0px 15px;
+    color: #272829;
+}
+
+.statisticsContainer .hours {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.statisticsContainer .hours .heading:hover {
+    color: #ff6666;
+}
+
+.statisticsContainer .hours .course {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    top: 0px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.statisticsContainer .hours .course:hover {
+    color: #ff6666;
+}
+
+.statisticsContainer .hours .weekly {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    position: relative;
+    top: 0px;
+    left: 300px;
+    cursor: pointer;
+}
+
+.statisticsContainer .hours .weekly .bi {
+    margin-left: 10px;
+}
+
+.statisticsContainer .hours .weekly .bi:hover {
+    color: #ff6666;
+}
+
+
+
+
+
+/* <!-- This is a Get Premium User Container --> */
+.premiumContainer {
+    position: fixed;
+    height: 128px;
+    width: 40%;
+    bottom: 4%;
+    right: 2%;
+    border-radius: 15px;
+    background: #EEEEEE;
+    border-bottom: 5px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.premiumContainer .brainImg {
+    position: fixed;
+    height: 128px;
+    bottom: 4%;
+    right: 6%;
+    border-radius: 15px;
+}
+
+.premiumContainer .premiumHeading {
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 15px;
+    font-size: 34px;
+}
+
+.premiumContainer .premiumSubtitle {
+    position: fixed;
+    height: 128px;
+    bottom: -30px;
+    margin-left: 30px;
+    border-radius: 15px;
+}
+
+
+.premiumContainer .goPremium {
+    background: #333;
+    font-weight: 500;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px 10px 0px 260px;
+    border: 1px solid #0F0F0F;
+}
+
+.premiumContainer .goPremium:hover {
+    background: #ff6666;
+    border: 1px solid #0F0F0F;
+    color: #0F0F0F;
+}
+
+/* <!-- Happy Coding  --> */
+
+/* <!-- Made By JEET --> */

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_Learning_Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="profileone.css">
+</head>
+
+<body>
+
+    <!-- This Is a Navigation bar Container -->
+    <div class="navbarContainer">
+        <span class="Nameuser">
+            <!-- <h1 class="UserName">JEET AHIRWAR</h1> -->
+            <img src="img/P&C_logo.png" alt="" class="UserImageName">
+        </span>
+        <span class="home">
+            <i class="bi bi-house-door-fill"></i>
+            <label for="">Home</label>
+        </span>
+        <span>
+            <i class="bi bi-chat-square-dots-fill"></i>
+            <label for="">Massages</label>
+        </span>
+        <span>
+            <i class="bi bi-play-circle-fill"></i>
+            <label for="">Continue</label>
+        </span>
+        <span id="UserProfile">
+            <i class="bi bi-person-fill Profile-toggle"></i>
+            <label for="">Profile</label>
+        </span>
+        <span class="settings">
+            <i class="bi bi-gear-wide-connected"></i>
+            <label for="">Settings</label>
+        </span>
+        <span>
+            <i class="bi bi-box-arrow-right LogoutUser"></i>
+            <label for="" class="LogoutUser">Logout</label>
+        </span>
+    </div>
+
+    <!--This Is a User profile Container -->
+    <div class="userProfilePopup">
+        <ul>
+            <li>
+                <p class="SignInSignUp">SignIn & SignUp</p>
+            </li>
+            <li>
+                <p>View Profile</p>
+            </li>
+        </ul>
+    </div>
+
+    <!--This Is a SignUP and SignIN Container -->
+    <div class="popupAlert-container" id="popupAlertContainer">
+        <div class="popupContainer" id="popupContainer">
+            <!-- Close button for the popup -->
+            <span class="close-popup" id="close-popup">&times;</span>
+
+
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social"><i class="bi bi-google"></i></a>
+                        <a href="#" class="social"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name" id="nameInput" />
+                    <input type="email" placeholder="Email" id="emailInput" />
+                    <input type="password" placeholder="Password" id="passwordInput" />
+                    <button id="closesignup">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social"><i class="bi bi-google"></i></a>
+                        <a href="#" class="social"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Welcome to Prompt Coder Academy!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="signUp">sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This Is a top Profile Nav Bar Container-->
+    <div class="profileContainer">
+        <div class="profile-pic">
+            <div class="search">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search Music...." class="search-input">
+            </div>
+            <div class="notification">
+                <i class="bi bi-bell-fill" id="bellIcon"></i>
+            </div>
+            <img alt="User Pic" src="https://d30y9cdsu7xlg0.cloudfront.net/png/138926-200.png" height="50">
+            <input id="profile-image-upload" class="hidden" type="file" onchange="previewFile()">
+            <div style="color:#999;"> </div>
+            <i class="bi bi-caret-down-fill" id="profileUser"></i>
+        </div>
+    </div>
+
+    <!-- This Is a top Profile Nav Bar Popup Container -->
+    <div class="profileUserPopup">
+        <h6 id="profile-image1">Change Profile</h6>
+    </div>
+
+    <!-- This is a Notification Popup Container-->
+    <div class="notificationPopup" id="notificationPopup">
+        <h6>Notifications</h6>
+        <button class="Allclear" id="clearButton">Clear</button>
+        <ul class="notificationList">
+            <li>
+                Notification 1
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+                <div class="notifyme">
+                    <h6>Welcome to E-Learning Platform</h6>
+                </div>
+            </li>
+            <li>
+                Notification 2
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 3
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 4
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 5
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 6
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 7
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 8
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 9
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+            <li>
+                Notification 10
+                <span class="remove-notification"><i class="bi bi-x-square-fill"></i></span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Top Greeting Container -->
+    <div class="greetingContainer">
+        <h1><strong>Hello, <span id="userName">User</span>!</strong> <br>
+            <p>it's good to see you again !!</p>
+        </h1>
+        <span><img src="img/greeting.png" alt=""></span>
+    </div>
+
+    <!-- This is a Completed Course Container -->
+    <div class="compCouContainer">
+        <span class="completedCourse">
+            <h1>18</h1>
+        </span>
+        <span class="completedCourse">
+            <h6>Course Completed</h6>
+        </span>
+    </div>
+
+    <!-- This is a In Progress Course Container -->
+    <div class="couInProgContainer">
+        <span class="InProgressCourse">
+            <h1>02</h1>
+        </span>
+        <span class="InProgressCourse">
+            <h6>Course<br>In Progress</h6>
+        </span>
+    </div>
+
+    <!-- This is a Countries Container -->
+    <div class="countriesContainer">
+        <ul class="countriesList">
+            <li>
+                <img src="img/india.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/united_state.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/united_kingdom.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/russia.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/canada.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/australia.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/france.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/germany.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/Netherlands1.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/switzerland.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/Sweden.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+            <li>
+                <img src="img/denmark.png" alt="">
+                <h5>India <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <button class="continueCourse">Continue</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- This is a Left Right Arrow Course Container -->
+    <div class="LRarrowContainer">
+        <span class="leftArrow">
+            <i class="bi bi-arrow-left-circle" id="leftArrow"></i>
+        </span>
+        <span class="rightArrow">
+            <i class="bi bi-arrow-right-circle" id="rightArrow"></i>
+        </span>
+    </div>
+
+    <!-- This is a Course Container -->
+    <div class="coursesContainer">
+        <h6>Courses</h6>
+        <div class="coursesNav">
+            <input type="radio" name="selectCat" id="selectCat1">
+            <label for="selectCat1" class="selectCat">All Courses</label>
+            <input type="radio" name="selectCat" id="selectCat2">
+            <label for="selectCat2" class="selectCat">Newest</label>
+            <input type="radio" name="selectCat" id="selectCat3">
+            <label for="selectCat3" class="selectCat">Top Rated</label>
+            <input type="radio" name="selectCat" id="selectCat4">
+            <label for="selectCat4" class="selectCat">Most Popular</label>
+        </div>
+
+        <ul class="coursesList">
+            <li>
+                <img src="img/cyber_security.png" alt="">
+                <h5>Cyber Security <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <span class="courseDuration">
+                    <i class="bi bi-clock-fill"></i>
+                    <p>10h 30m</p>
+                </span>
+                <span class="courseRating">
+                    <i class="bi bi-star-fill toggle-star"></i>
+                    <p>4.9</p>
+                    <i class="bi bi-heart-fill toggle-heart"></i>
+                    <p>99</p>
+                </span>
+                <button class="viewCourse">View Course</button>
+            </li>
+            <li>
+                <img src="img/figma.png" alt="">
+                <h5>Figma Developers <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <span class="courseDuration">
+                    <i class="bi bi-clock-fill"></i>
+                    <p>10h 30m</p>
+                </span>
+                <span class="courseRating">
+                    <i class="bi bi-star-fill toggle-star"></i>
+                    <p>4.9</p>
+                    <i class="bi bi-heart-fill toggle-heart"></i>
+                    <p>99</p>
+                </span>
+                <button class="viewCourse">View Course</button>
+            </li>
+            <li>
+                <img src="img/Full_stack.png" alt="">
+                <h5>Full Stack Developers <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <span class="courseDuration">
+                    <i class="bi bi-clock-fill"></i>
+                    <p>10h 30m</p>
+                </span>
+                <span class="courseRating">
+                    <i class="bi bi-star-fill toggle-star"></i>
+                    <p>4.9</p>
+                    <i class="bi bi-heart-fill toggle-heart"></i>
+                    <p>99</p>
+                </span>
+                <button class="viewCourse">View Course</button>
+            </li>
+            <li>
+                <img src="img/javascript.png" alt="">
+                <h5>JavaScript Developers <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <span class="courseDuration">
+                    <i class="bi bi-clock-fill"></i>
+                    <p>10h 30m</p>
+                </span>
+                <span class="courseRating">
+                    <i class="bi bi-star-fill toggle-star"></i>
+                    <p>4.9</p>
+                    <i class="bi bi-heart-fill toggle-heart"></i>
+                    <p>99</p>
+                </span>
+                <button class="viewCourse">View Course</button>
+            </li>
+            <li>
+                <img src="img/python.png" alt="">
+                <h5>Python Developers <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <span class="courseDuration">
+                    <i class="bi bi-clock-fill"></i>
+                    <p>10h 30m</p>
+                </span>
+                <span class="courseRating">
+                    <i class="bi bi-star-fill toggle-star"></i>
+                    <p>4.9</p>
+                    <i class="bi bi-heart-fill toggle-heart"></i>
+                    <p>99</p>
+                </span>
+                <button class="viewCourse">View Course</button>
+            </li>
+            <li>
+                <img src="img/Photoshop.png" alt="">
+                <h5>Course Name <br>
+                    <div class="facultyName">By Jeet Ahirwar</div>
+                </h5>
+                <span class="courseDuration">
+                    <i class="bi bi-clock-fill"></i>
+                    <p>10h 30m</p>
+                </span>
+                <span class="courseRating">
+                    <i class="bi bi-star-fill toggle-star"></i>
+                    <p>4.9</p>
+                    <i class="bi bi-heart-fill toggle-heart"></i>
+                    <p>99</p>
+                </span>
+                <button class="viewCourse">View Course</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- This is a User Progress Bar Container -->
+    <div class="statisticsContainer">
+        <h1 class="statisticsHeading">Your Statistics</h1>
+        <img src="img/Data.png">
+        <div class="hours">
+            <h6 class="heading">Learning Hours</h6>
+            <h6 class="course">My Course</h6>
+            <h6 class="weekly">Weekly <i class="bi bi-caret-down-fill" id="profileUser"></i></h6>
+        </div>
+    </div>
+
+    <!-- This is a Get Premium User Container -->
+    <div class=" premiumContainer">
+        <img src="img/brain.png" alt="" class="brainImg">
+        <h1 class="premiumHeading">Learn Even More!</h1>
+        <span class="premiumSubtitle">
+            <h6>Unlock premium features <br> only for $9.99 per month.</h6>
+        </span>
+        <button class="goPremium">Go Premium</button>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
+
+<!-- Happy Coding  -->
+
+<!-- Made By JEET -->
