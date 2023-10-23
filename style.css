@@ -167,8 +167,8 @@ a {
 
 .popupAlert-container .popupContainer button {
     border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background: #ff445c;
+    border: 1px solid #272829;
+    background: #333;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -299,9 +299,9 @@ a {
 }
 
 .overlay {
-    background: #ff416c;
-    background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background: #272829;
+    background: -webkit-linear-gradient(to right, #272829, #333);
+    background: linear-gradient(to right, #272829, #333);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -372,7 +372,7 @@ a {
     right: 10px;
     cursor: pointer;
     font-size: 20px;
-    color: black;
+    color: #ff6666;
     z-index: 1001;
 }
 
@@ -452,8 +452,8 @@ a {
     width: 100%;
     outline: none;
     padding: 0px 20px;
-    color: #fff;
-    font-size: 12px;
+    color: #272829;
+    font-size: 14px;
 }
 
 .profileContainer .profile-pic .notification {
